@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2918C3E3-2FBB-404F-9855-0D1C11EA39E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SQLMTD</RootNamespace>
+    <AssemblyName>SQLMTD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DB\DatabaseManager.cs" />
+    <Compile Include="Data\Info\CityInfo.cs" />
+    <Compile Include="Data\Info\Exceptions\ManifactureNotFoundException.cs" />
+    <Compile Include="Data\Info\Exceptions\ModelNotFoundException.cs" />
+    <Compile Include="Data\Info\OwnerInfo.cs" />
+    <Compile Include="Data\Info\UserInfo.cs" />
+    <Compile Include="Data\Info\UserRole.cs" />
+    <Compile Include="Data\Info\UserStatus.cs" />
+    <Compile Include="Data\Info\VehicleInfo.cs" />
+    <Compile Include="Data\Info\VehicleType.cs" />
+    <Compile Include="Logic\Login\LoginManager.cs" />
+    <Compile Include="Logic\Owner.cs" />
+    <Compile Include="Logic\Statistics.cs" />
+    <Compile Include="Logic\User.cs" />
+    <Compile Include="Logic\Vehicle.cs" />
+    <Compile Include="Logic\VehicleSelectionType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Controls\DisplayOwner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\DisplayOwner.Designer.cs">
+      <DependentUpon>DisplayOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\DisplayVehicle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\DisplayVehicle.Designer.cs">
+      <DependentUpon>DisplayVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\LinkToVehicle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\LinkToVehicle.Designer.cs">
+      <DependentUpon>LinkToVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\NewOwner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\NewOwner.Designer.cs">
+      <DependentUpon>NewOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\NewVehicle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\NewVehicle.Designer.cs">
+      <DependentUpon>NewVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectOwnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SelectOwnerForm.Designer.cs">
+      <DependentUpon>SelectOwnerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateOwnerAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateOwnerAddress.Designer.cs">
+      <DependentUpon>UpdateOwnerAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\VehicleInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VehicleInformationForm.Designer.cs">
+      <DependentUpon>VehicleInformationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Controls\DisplayOwner.resx">
+      <DependentUpon>DisplayOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\DisplayVehicle.resx">
+      <DependentUpon>DisplayVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\LinkToVehicle.resx">
+      <DependentUpon>LinkToVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\NewOwner.resx">
+      <DependentUpon>NewOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\NewVehicle.resx">
+      <DependentUpon>NewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectOwnerForm.resx">
+      <DependentUpon>SelectOwnerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdateOwnerAddress.resx">
+      <DependentUpon>UpdateOwnerAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VehicleInformationForm.resx">
+      <DependentUpon>VehicleInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
